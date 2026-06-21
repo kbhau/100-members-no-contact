@@ -108,18 +108,14 @@ func start_dialog(lines: Array[String]):
 	
 	update_animations(Vector2.ZERO)
 	
-	# Mostrar la caja de texto en pantalla
 	dialogue_box.show()
 	dialogue_text.text = dialogue_pages[current_page]
 
 func advance_dialogue():
 	current_page += 1
-	
-	# Si todavía quedan frases en la lista, mostramos la siguiente
 	if current_page < dialogue_pages.size():
 		dialogue_text.text = dialogue_pages[current_page]
 	else:
-		# Si ya no hay más frases, cerramos la caja y liberamos al jugador
 		finish_dialogue()
 
 func finish_dialogue():

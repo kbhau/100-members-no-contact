@@ -47,9 +47,16 @@ func end_battle() -> void:
 		_set_suspended(current_scene, false)
 
 func _mount(scene_name: SceneKey) -> Node:
+	_WORLD_NODE = get_node_or_null("/root/World")
+	if _WORLD_NODE == null:
+		_WORLD_NODE = get_tree().current_scene
+		
 	var node: Node = load(_SCENES_MAP[scene_name]).instantiate()
-	_WORLD_NODE.add_child(node)
-	_activate_camera(node)
+	if _WORLD_NODE != null:
+		_WORLD_NODE.add_child(node)
+		_activate_camera(node)
+	else:
+		push_error("There's no valid node to mount the scene")
 	return node
 
 func _set_suspended(node: Node, suspended: bool) -> void:
