@@ -13,6 +13,7 @@
 [node name="Level1" parent="Levels" unique_id=1666082091 instance=ExtResource("2_p5wng")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1524686198 node_paths=PackedStringArray("target")]
+zoom = Vector2(2, 2)
 script = ExtResource("3_lksfj")
 target = NodePath("../Player")
 follow_magnitude = 4.0
