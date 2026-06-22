@@ -19,10 +19,6 @@ run/main_scene="res://Actual Game Folder/scenes/world.tscn"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.svg"
 
-[audio]
-
-buses/default_bus_layout="res://default_bus_layout.tres"
-
 [autoload]
 
 Globals="*uid://byw85re6utohf"
@@ -41,9 +37,7 @@ project/assembly_name="100-members-no-contact"
 
 items=""
 player=""
-
 interactable="Interactable objects"
-player=""
 
 [gui]
 
