@@ -32,6 +32,8 @@ const SPIN_BLUR_SHADER = preload("res://Actual Game Folder/shaders/spin_blur.gds
 @export var wobble_amplitude: float = 3.5
 @export var wobble_speed: float = 26.0
 
+# to control item interaction ui visibility
+@onready var interact_UI = $"../UI/item interaction ui/ColorRect"
 @export_category("Wall Bounce")
 @export var ricochet_boost: float = 1.4
 @export var ricochet_min_speed: float = 120.0 # below this it's a soft tap, no boost
@@ -121,6 +123,10 @@ var _gameover_label: Label
 var _victory_label: Label
 
 func _ready() -> void:
+	# this is necessary for _on_body_entered, 1 is technically enough for just the player but with multiple bayblades we might need to increase this value.
+	max_contacts_reported = 5
+	# needed for inventory system integration, sets the reference for the player using a global function
+	Globals.player_reference(self)
 	SceneManager.player_beyblade = self
 	AudioManager.play_sfx(launch_sfx_stream,global_position)
 
@@ -389,6 +395,10 @@ func _on_body_entered(body: Node) -> void:
 		return
 
 	spin_velocity -= spin_velocity_drop_on_collision
+	
+	# requires on the player having a collision area 2d to pickup items,
+	#if area.has_method("pickup_item"):
+		#area.pickup_item()
 
 	var impact := clampf(linear_velocity.length() / max_top_speed, 0.35, 1.4)
 	var camera := get_viewport().get_camera_2d()
