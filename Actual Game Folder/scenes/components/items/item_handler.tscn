@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://beb77h0ie6g82" path="res://Actual Game Folder/scripts/ui/item_handler.gd" id="1_5h18i"]
 [ext_resource type="Texture2D" uid="uid://clofnffjtdyqq" path="res://Miscellanious Assets Dump/Image/minnesota.png" id="1_5v20m"]
+[ext_resource type="PackedScene" uid="uid://dob7lugxmo08n" path="res://Actual Game Folder/scenes/components/items/item_ui.tscn" id="1_jgo0c"]
 [ext_resource type="Script" uid="uid://cbb2ayk5x71vy" path="res://Actual Game Folder/scripts/ui/items_control.gd" id="2_it5hk"]
+[ext_resource type="Resource" uid="uid://4t8nqyh0c7q6" path="res://Actual Game Folder/scenes/components/items/example_item_2.tres" id="4_it5hk"]
 
 [node name="ItemHandler" type="HBoxContainer" unique_id=1059174855]
 offset_left = 301.0
@@ -29,6 +31,38 @@ script = ExtResource("2_it5hk")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="itemUI" parent="ItemsControl/Items" unique_id=1625990013 instance=ExtResource("1_jgo0c")]
+layout_mode = 2
+item = ExtResource("4_it5hk")
+
+[node name="itemUI2" parent="ItemsControl/Items" unique_id=1111524133 instance=ExtResource("1_jgo0c")]
+layout_mode = 2
+item = ExtResource("4_it5hk")
+
+[node name="itemUI3" parent="ItemsControl/Items" unique_id=1006348162 instance=ExtResource("1_jgo0c")]
+layout_mode = 2
+item = ExtResource("4_it5hk")
+
+[node name="itemUI4" parent="ItemsControl/Items" unique_id=1242882663 instance=ExtResource("1_jgo0c")]
+layout_mode = 2
+item = ExtResource("4_it5hk")
+
+[node name="itemUI5" parent="ItemsControl/Items" unique_id=1842137659 instance=ExtResource("1_jgo0c")]
+layout_mode = 2
+item = ExtResource("4_it5hk")
+
+[node name="itemUI6" parent="ItemsControl/Items" unique_id=1515274552 instance=ExtResource("1_jgo0c")]
+layout_mode = 2
+item = ExtResource("4_it5hk")
+
+[node name="itemUI7" parent="ItemsControl/Items" unique_id=728971078 instance=ExtResource("1_jgo0c")]
+layout_mode = 2
+item = ExtResource("4_it5hk")
+
+[node name="itemUI8" parent="ItemsControl/Items" unique_id=224658110 instance=ExtResource("1_jgo0c")]
+layout_mode = 2
+item = ExtResource("4_it5hk")
 
 [node name="right button" type="TextureButton" parent="." unique_id=353974335]
 unique_name_in_owner = true

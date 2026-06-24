@@ -9,7 +9,8 @@ var items : ItemHandler
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	items.activate_items_by_type(Item.Type.EVENT)
+	pass
+	#items.activate_items_by_type(Item.Type.EVENT)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

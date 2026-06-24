@@ -124,8 +124,8 @@ var _gameover_label: Label
 var _victory_label: Label
 
 ## item system integration
-@export var items: ItemHandler
-#@onready var item_handler: ItemHandler = $CanvasLayer/ItemHandler
+var items: ItemHandler 
+@onready var item_handler: ItemHandler = $item_handler
 
 
 func _ready() -> void:
@@ -139,6 +139,9 @@ func _ready() -> void:
 	_setup_spin_blur()
 	_setup_hud()
 	_play_spawn_intro()
+	
+	
+
 
 func _play_spawn_intro() -> void:
 	_launching = true
@@ -163,8 +166,8 @@ func _on_spawn_intro_done() -> void:
 	AudioManager.play_sfx(collision_sfx_stream, global_position)
 	
 	## start of battle item activation
-	items.item_activated.connect(on_item_activation)
-	items.activate_items_by_type(Item.Type.START_OF_BATTLE)
+	#items.item_activated.connect(on_item_activation)
+	#items.activate_items_by_type(Item.Type.START_OF_BATTLE)
 
 
 func _exit_tree() -> void:
@@ -521,10 +524,11 @@ func _win() -> void:
 	_boss_bar.visible = false
 	_victory_label.visible = true
 	_clear_horde()
+	
 	get_tree().create_timer(2.0).timeout.connect(SceneManager.end_battle)
 	
 	# end of combat item activation
-	items.activate_items_by_type(Item.Type.END_OF_BATTLE)
+	#items.activate_items_by_type(Item.Type.END_OF_BATTLE)
 
 func _stop_spawners() -> void:
 	for s in get_tree().get_nodes_in_group("enemy_spawner"):
