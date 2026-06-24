@@ -10,6 +10,7 @@ extends Control
 var audio_bus_id
 
 @onready var settings: Panel = $Settings
+@onready var music_slider: HSlider = $Settings/Music
 
 
 
@@ -27,7 +28,8 @@ func _ready() -> void:
 	
 	settings.visible = false
 	audio_bus_id = AudioServer.get_bus_index(Audio_bus_name)
-	
+	_on_music_value_changed(music_slider.value)
+
 
 func hover():
 	AudioManager.play_sfx(button_hover_stream,Vector2.ZERO)
