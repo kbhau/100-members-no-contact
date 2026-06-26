@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bwucxqtoakuy6" path="res://Miscellanious Assets Dump/Image/backgrounds/background_blue_distortion_640x320.png" id="1_pvo6j"]
 [ext_resource type="AudioStream" uid="uid://dvb67gdm65wid" path="res://Miscellanious Assets Dump/Audio/sfx/button_hover.wav" id="2_vnj0c"]
 [ext_resource type="AudioStream" uid="uid://b5xyt6hpwoq1h" path="res://Miscellanious Assets Dump/Audio/sfx/button_press.wav" id="3_08yys"]
-[ext_resource type="AudioStream" uid="uid://bnss0855gpofg" path="res://Miscellanious Assets Dump/Audio/music/beyblades-battle.mp3" id="4_o0cgn"]
+[ext_resource type="AudioStream" uid="uid://bnss0855gpofg" path="res://Miscellanious Assets Dump/Audio/music/spinblades-battle.mp3" id="4_o0cgn"]
 [ext_resource type="Texture2D" uid="uid://te8s0xvm3gvg" path="res://Miscellanious Assets Dump/Image/Title screen/Endless Mode.png" id="8_tdn6d"]
 [ext_resource type="Texture2D" uid="uid://cej1hx2kl6ct6" path="res://Miscellanious Assets Dump/Image/Title screen/Settings icon.png" id="9_bkt1e"]
 [ext_resource type="Texture2D" uid="uid://rox7vko7cfj6" path="res://Miscellanious Assets Dump/Image/Title screen/Rip.png" id="9_mpbnu"]

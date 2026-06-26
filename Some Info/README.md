@@ -22,7 +22,7 @@ We're making a Beyblade roguelike/metroidvania deckbuilder RPG (Or Beyblade buil
 
 * vofy (https://vofy.itch.io/ or https://github.com/kbhau)
   * ak47.png
-  * beyblades-battle.mp3
+  * spinblades-battle.mp3
   * random_characters.png
 
 ## External Assets

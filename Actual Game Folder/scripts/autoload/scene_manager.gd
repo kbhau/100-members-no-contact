@@ -82,7 +82,7 @@ func _enter_battle_now(context: Dictionary) -> void:
 
 	current_scene = _mount(SceneKey.GAMEPLAY)
 	_battle_active = true
-	AudioManager.crossfade_music(preload("res://Miscellanious Assets Dump/Audio/music/beyblades-battle.mp3"))
+	AudioManager.crossfade_music(preload("res://Miscellanious Assets Dump/Audio/music/spinblades-battle.mp3"))
 
 	await Transition.reveal()
 
